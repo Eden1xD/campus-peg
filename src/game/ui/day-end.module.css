@@ -1,0 +1,24 @@
+.dialog {
+  box-sizing: border-box; width: min(26rem, calc(100vw - 2rem)); max-height: 90dvh;
+  overflow: auto; margin: auto; padding: 1.5rem; color: #f4eff9; background: #221f29;
+  border: 1px solid #5e516e; border-radius: 16px; font: inherit; box-shadow: 0 20px 70px #100d1980;
+}
+.dialog::backdrop { background: #12101bbd; }
+.dialog h2 { margin: 0 0 1rem; font-size: 1.55rem; }
+.result { padding: .85rem 1rem; border-radius: 9px; background: #332b40; }
+.result span, .result strong { display: block; }
+.result strong { font-size: 1.65rem; color: #decbff; font-variant-numeric: tabular-nums; }
+.result strong[data-loss="true"] { color: #ffb9ab; }
+.dialog dl > div { display: flex; justify-content: space-between; gap: .8rem; padding: .44rem 0; border-bottom: 1px solid #413947; }
+.dialog dt { color: #dbd4e2; }
+.dialog dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.dialog button { width: 100%; padding: .8rem; border: 0; border-radius: 8px; background: #d3bbf4; color: #271937; font: inherit; font-weight: 700; cursor: pointer; }
+.dialog button:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+
+.dialog h3 { margin: 1.15rem 0 .55rem; font-size: 1rem; }
+.dialog dl.routine { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; margin: 0 0 1.2rem; }
+.dialog .routine > div { flex-direction: column; gap: .2rem; border: 0; background: #302b36; border-radius: .5rem; padding: .75rem; }
+.routine dt { font-size: .85rem; }
+.routine dd { font-size: 1.12rem; }
+/* botão de continuar sempre visível em telas baixas (celular deitado) */
+.dialog > button:last-child { position: sticky; bottom: -1.5rem; margin-top: 1rem; width: 100%; }

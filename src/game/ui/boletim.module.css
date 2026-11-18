@@ -1,0 +1,52 @@
+.wrap { position: absolute; inset: 0; z-index: 90; background: rgba(12,9,22,.72); display: grid; place-items: center; padding: max(8px, env(safe-area-inset-top)) 8px; pointer-events: auto; outline: none; }
+.sheet { width: min(760px, 100%); max-height: calc(100dvh - 16px); display: flex; flex-direction: column; background: linear-gradient(180deg, #221a38, #17121f); color: #f6f1ff; border-radius: 22px; border: 1px solid rgba(201,182,255,.35); font: 14px/1.45 system-ui, sans-serif; box-shadow: 0 24px 60px rgba(0,0,0,.5); overflow: hidden; }
+.head { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px 8px; background: linear-gradient(90deg, rgba(109,74,168,.55), transparent); }
+.head small { color: #c9b6ff; text-transform: uppercase; letter-spacing: .1em; font-size: 10px; }
+.head h2 { margin: 0; font-size: 26px; }
+.grade { display: flex; flex-direction: column; align-items: center; min-width: 92px; padding: 6px 10px; border-radius: 14px; background: rgba(255,255,255,.08); border: 2px solid #f2d16b; }
+.grade b { font-size: 34px; line-height: 1; color: #f2d16b; }
+.grade span { font-size: 11px; opacity: .85; }
+.grade[data-grade="D"], .grade[data-grade="E"] { border-color: #e06767; }
+.grade[data-grade="D"] b, .grade[data-grade="E"] b { color: #ff9a8a; }
+.pages { display: flex; gap: 4px; padding: 6px 12px; overflow-x: auto; border-bottom: 1px solid rgba(201,182,255,.15); }
+.pages button { white-space: nowrap; background: transparent; border: 0; color: #cfc4ec; padding: 8px 10px; border-radius: 10px; font: 600 12px system-ui; min-height: 36px; }
+.pageOn { background: #6d4aa8 !important; color: #fff !important; }
+.body { flex: 1; overflow: auto; padding: 12px 18px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.card { background: rgba(255,255,255,.06); border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
+.card small { opacity: .7; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+.card b { font-size: 24px; }
+.card em { font-size: 14px; opacity: .6; font-style: normal; }
+.pos { color: #8fe0a6; }
+.neg { color: #ff9a8a; }
+.trendUp { color: #8fe0a6; font-size: 12px; }
+.trendDown { color: #ff9a8a; font-size: 12px; }
+.trendFlat { opacity: .6; font-size: 12px; }
+.quote { margin: 12px 0 4px; padding: 10px 14px; border-left: 4px solid #f2d16b; background: rgba(242,209,107,.08); border-radius: 8px; font-style: italic; }
+.note { opacity: .8; font-size: 12px; }
+.money { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-bottom: 8px; }
+.money div { background: rgba(255,255,255,.06); border-radius: 12px; padding: 8px 10px; }
+.money small { display: block; font-size: 11px; opacity: .7; }
+.money b { font-size: 18px; }
+.body h3 { margin: 12px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: #c9b6ff; }
+.bar { display: grid; grid-template-columns: minmax(110px, 180px) 1fr 100px; gap: 8px; align-items: center; margin: 5px 0; font-size: 13px; }
+.bar div { height: 10px; background: rgba(255,255,255,.08); border-radius: 6px; overflow: hidden; }
+.bar i { display: block; height: 100%; border-radius: 6px; }
+.barPos { background: #63d68f; }
+.barNeg { background: #e06767; }
+.bar b { text-align: right; }
+.list { margin: 0; padding-left: 4px; list-style: none; }
+.list li { padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+.ok { color: #b9f0c8; }
+.warnLi { color: #ffd98a; }
+.foot { position: sticky; bottom: 0; display: flex; gap: 8px; padding: 10px 18px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(23,18,31,.98); border-top: 1px solid rgba(201,182,255,.15); }
+.foot button { flex: 1; min-height: 46px; border-radius: 12px; border: 1px solid rgba(201,182,255,.4); background: rgba(138,107,216,.3); color: #fff; font: 700 14px system-ui; }
+.foot .go { background: #6d4aa8; border-color: #f2d16b; }
+.foot .ghost { background: transparent; font-weight: 600; flex: 0 1 auto; }
+@media (max-height: 460px) {
+  .head { padding: 8px 14px 4px; }
+  .head h2 { font-size: 20px; }
+  .grade b { font-size: 24px; }
+  .card b { font-size: 18px; }
+  .body { padding: 8px 14px; }
+}
